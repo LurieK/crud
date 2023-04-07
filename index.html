@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang ="en">
     <head>
         <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
 
     <header>
@@ -13,40 +15,40 @@
 
         <div class="work">
         <h3> Work To Do</h3>
-        <form>
+        <form id="form-work">
             <input id="work-item" type="text" placeholder="New" required />
         </form>
 
         <h4>My Work Items</h4>
-        <ul></ul>
+        <ul id="work"></ul>
 
-        <button>Clear All</button>
+        <button id="work-button">Clear All</button>
         </div>
         
         
         <div class="life">
         <h3>Life To Do</h3>
-        <form>
+        <form id="form-life">
             <input id="life-item" type="text" placeholder="New" required />
         </form>
 
         <h4>My Life Items</h4>
-        <ul></ul>
+        <ul id="life"></ul>
 
-        <button>Clear All</button>
+        <button id="life-button">Clear All</button>
         </div>
 
 
         <div class="joy">
         <h3>Joy To Do</h3>
-        <form>
+        <form id="form-joy">
             <input id="joy-item" type="text" placeholder="New" required />
         </form>
 
         <h4>My Joy Items</h4>
-        <ul></ul>
+        <ul id="joy"></ul>
 
-        <button>Clear All</button>
+        <button if="joy-button">Clear All</button>
         </div>
 
 
@@ -57,5 +59,5 @@
     <footer>
 
     </footer>
-
+    <script src="scripts.js"></script>
 </html>
