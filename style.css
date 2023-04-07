@@ -1,0 +1,24 @@
+
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.work {
+    grid-column-start: 1;
+}
+
+.life {
+    grid-column-start: 2;
+}
+
+.joy {
+    grid-column-start: 3;
+}
+
+h1 {
+    grid-column: 1/3;
+  
+}
