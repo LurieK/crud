@@ -1,18 +1,16 @@
-const formWork = document.getElementById('form-work')
-const formLife = document.getElementById('form-life')
-const formJoy = document.getElementById('form-joy')
-const ulWork = document.getElementById('work')
-const ulLife = document.getElementById('life')
-const ulJoy = document.getElementById('joy')
-const clearWork = document.getElementById('work-button')
-const clearLife = document.getElementById('life-button')
-const clearJoy = document.getElementById('joy-button')
-const workInput = document.getElementById('work-item')
-const lifeInput = document.getElementById('life-item')
-const joyInput = document.getElementById('joy-item')
-
 
 //function to create work list
+const formWork = document.getElementById('form-work')
+const ulWork = document.getElementById('work')
+const clearWork = document.getElementById('work-button')
+const workInput = document.getElementById('work-item')
+
+let workItemsArray = []
+
+localStorage.setItem('work-items', JSON.stringify(workItemsArray))
+const data = JSON.parse(localStorage.getItem('work-items'))
+
+
 const liMaker1 = (text) =>{
     const li= document.createElement('li');
     li.textContent = text;
@@ -23,12 +21,23 @@ const liMaker1 = (text) =>{
 formWork.addEventListener('submit', function(e){
     e.preventDefault();
 
+    workItemsArray.push(workInput.value);
+    localStorage.setItem('work-items', JSON.stringify(workItemsArray));
+
     liMaker1(workInput.value)
     workInput.value = '';
  
+});
+
+data.forEach((workItem)=>{
+    liMaker1(workItem)
 })
 
 //function to create life list
+const formLife = document.getElementById('form-life')
+const ulLife = document.getElementById('life')
+const clearLife = document.getElementById('life-button')
+const lifeInput = document.getElementById('life-item')
 
 const liMaker2 = (text) =>{
     const li= document.createElement('li');
@@ -46,6 +55,10 @@ formLife.addEventListener('submit', function(e){
 })
 
 //function for joy list
+const formJoy = document.getElementById('form-joy')
+const ulJoy = document.getElementById('joy')
+const clearJoy = document.getElementById('joy-button')
+const joyInput = document.getElementById('joy-item')
 
 const liMaker3 = (text) =>{
     const li= document.createElement('li');
@@ -61,3 +74,9 @@ formJoy.addEventListener('submit', function(e){
     joyInput.value = '';
  
 })
+
+
+
+
+
+
