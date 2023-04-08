@@ -1,10 +1,37 @@
 
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@font-face {
+  font-family: 'Krysttal Spears';
+  src: url('./Krysttal\ Spears\ Free.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+  
 }
+
+html::before {
+    content: '';
+    background-image: url(./img/gabby-conde-sP33SU9vX0k-unsplash.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    opacity: 0.4;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
 .work {
     grid-column-start: 1;
@@ -20,5 +47,44 @@ body {
 
 h1 {
     grid-column: 1/3;
+    font-family: 'Krysttal Spears';
+    font-size: 80px;
+    margin-left: 30px;
+    opacity: 90%;
+    color: #004D1A;
+   
   
+}
+
+button {
+    border: hidden;
+    background-color: #891D5D;
+    font-size: 16px;
+    color: white;
+    padding: 10px
+   
+}
+
+li {
+    font-family: 'Caveat', cursive;
+    font-size: 23px;
+}
+
+h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 35px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    font-family: 'Encode Sans', sans-serif;
+}
+input {
+    font-family: 'Caveat', cursive;
+}
+form {
+    display: flex;
+    justify-content: center;
 }
