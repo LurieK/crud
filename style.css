@@ -103,6 +103,11 @@ form {
     justify-content: center;
 }
 
+#work-enter,
+#life-enter,
+#joy-enter {
+    margin-top: 10px;
+}
 @media screen and (max-width: 1000px){
 
     html::before {
