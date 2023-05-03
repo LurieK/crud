@@ -103,11 +103,18 @@ form {
     justify-content: center;
 }
 
-#work-enter,
-#life-enter,
-#joy-enter {
-    margin-top: 10px;
+@media screen and (max-width: 1160px){
+    h1 {
+        
+        grid-area: 1/1/1/span 3;
+        font-size: 70px;
+        padding-left: 10px;
+        padding-right: 10px;
+       
+    }
 }
+
+
 @media screen and (max-width: 1000px){
 
     html::before {
@@ -137,11 +144,7 @@ form {
 
     h1 {
         
-        grid-area: 1/1/1/span 3;
-        font-size: 60px;
-        padding-left: 10px;
-        padding-right: 10px;
-       
+        font-size: 60px;   
     }
 
     button {

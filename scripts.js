@@ -1,5 +1,5 @@
 
-//function to create work list
+//functions to create work list
 const formWork = document.getElementById('form-work')
 const ulWork = document.getElementById('work')
 const clearWork = document.getElementById('work-button')
@@ -22,43 +22,42 @@ const liMaker1 = (text) =>{
 
 }
 
-
-
-formWork.addEventListener('submit', function(e){
-    e.preventDefault();
-
+function addWorkItem() {
     workItemsArray.push(workInput.value);
     localStorage.setItem('work-items', JSON.stringify(workItemsArray));
-
-    liMaker1(workInput.value)
+    liMaker1(workInput.value);
     workInput.value = '';
- 
-});
+  }
+  
+  formWork.addEventListener('submit', function(e){
+    e.preventDefault();
+    addWorkItem();
+  });
+  
+//   workEnter.addEventListener('click', function(e) { 
+//     e.preventDefault();
+//     addWorkItem();
+//   });
+  
+
+
 
 data.forEach((workItem)=>{
     liMaker1(workItem)
 })
 
 
-workEnter.addEventListener('click', function(e) { 
-    e.preventDefault();
-  
-    workItemsArray.push(workInput.value);
-    localStorage.setItem('work-items', JSON.stringify(workItemsArray));
-  
-    liMaker1(workInput.value);
-    workInput.value = '';
-  });
+
 
 clearWork.addEventListener('click',function() {
-    localStorage.clear();
+    localStorage.removeItem('work-items');
 
     while (ulWork.firstChild) {
         ulWork.removeChild(ulWork.firstChild)
     }
 })
 
-//function to create life list
+//functions to create life list
 const formLife = document.getElementById('form-life')
 const ulLife = document.getElementById('life')
 const clearLife = document.getElementById('life-button')
@@ -82,12 +81,9 @@ const liMaker2 = (text) =>{
 
 
 formLife.addEventListener('submit', function(e){
-   
-        
+       
     e.preventDefault();
 
-    
-    
     lifeItemsArray.push(lifeInput.value);
     localStorage.setItem('life-items', JSON.stringify(lifeItemsArray))
 
@@ -100,27 +96,27 @@ data2.forEach((lifeItem)=> {
     liMaker2(lifeItem)
 })
 
-lifeEnter.addEventListener('click', function(e) { 
-    e.preventDefault();
+// lifeEnter.addEventListener('click', function(e) { 
+//     e.preventDefault();
     
     
-    lifeItemsArray.push(lifeInput.value);
-    localStorage.setItem('life-items', JSON.stringify(lifeItemsArray));
+//     lifeItemsArray.push(lifeInput.value);
+//     localStorage.setItem('life-items', JSON.stringify(lifeItemsArray));
   
-    liMaker2(lifeInput.value);
-    lifeInput.value = '';
+//     liMaker2(lifeInput.value);
+//     lifeInput.value = '';
  
-});
+// });
 
 clearLife.addEventListener('click', function(){
-    localStorage.clear()
+    localStorage.removeItem('life-items');
 
     while(ulLife.firstChild) {
         ulLife.removeChild(ulLife.firstChild)
     }
 })
 
-//function for joy list
+//functions for joy list
 const formJoy = document.getElementById('form-joy')
 const ulJoy = document.getElementById('joy')
 const clearJoy = document.getElementById('joy-button')
@@ -157,18 +153,18 @@ data3.forEach((joyItem) =>{
     liMaker3(joyItem)
 })
 
-joyEnter.addEventListener('click', function(e) { 
-    e.preventDefault();
+// joyEnter.addEventListener('click', function(e) { 
+//     e.preventDefault();
   
-    joyItemsArray.push(joyInput.value);
-    localStorage.setItem('joy-items', JSON.stringify(joyItemsArray));
+//     joyItemsArray.push(joyInput.value);
+//     localStorage.setItem('joy-items', JSON.stringify(joyItemsArray));
   
-    liMaker3(joyInput.value);
-    joyInput.value = '';
-  });
+//     liMaker3(joyInput.value);
+//     joyInput.value = '';
+//   });
 
 clearJoy.addEventListener('click', function () {
-    localStorage.clear();
+    localStorage.removeItem('joy-items');
 
     while (ulJoy.firstChild){
         ulJoy.removeChild(ulJoy.firstChild)

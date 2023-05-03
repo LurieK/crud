@@ -17,45 +17,48 @@
     <body>
         <h1>Today's To-Dos</h1>
 
-        <div class="work">
+        <div class="work" >
         <h3> Work To Do</h3>
         <form id="form-work">
-            <input id="work-item" type="text" placeholder="New" required />
+            <input id="work-item" type="text" placeholder="New" required aria-label="New work item"/>
+            <button id="work-enter" type="submit">Enter</button>
         </form>
-        <button id="work-enter">Enter</button>
+        
 
         <h4>My Work Items:</h4>
         <ul id="work"></ul>
 
-        <button id="work-button">Clear! I got all my work done!</button>
+        <button id="work-button" type="button">Clear! I got all my work done!</button>
         </div>
         
         
         <div class="life">
         <h3>Self-Care To Do</h3>
         <form id="form-life">
-            <input id="life-item" type="text" placeholder="New" required />
+            <input id="life-item" type="text" placeholder="New" required required aria-label="New Self-Care item"/>
+            <button id="life-enter" type="submit">Enter</button>
         </form>
-        <button id="life-enter">Enter</button>
+        
 
         <h4>My Self-Care Items:</h4>
         <ul id="life"></ul>
 
-        <button id="life-button">Clear! Life is in order!</button>
+        <button id="life-button" type="button">Clear! Life is in order!</button>
         </div>
 
 
         <div class="joy">
         <h3>Pleasure To Do</h3>
         <form id="form-joy">
-            <input id="joy-item" type="text" placeholder="New" required />
+            <input id="joy-item" type="text" placeholder="New" required required aria-label="New Pleasure item"/>
+            <button id="joy-enter" type="submit">Enter</button>
         </form>
-        <button id="joy-enter">Enter</button>
+        
 
         <h4>My Pleasure Items:</h4>
         <ul id="joy"></ul>
 
-        <button id="joy-button">Clear! Today was a great day!</button>
+        <button id="joy-button" type="button">Clear! Today was a great day!</button>
         </div>
 
 
