@@ -1,4 +1,4 @@
-# Daily To Do
+# CRUD Daily To Do
 
 This is a simple CRUD web app that allows you to create and store lists of work, life, and joy items for your daily journal.
 
