@@ -109,10 +109,10 @@ ul {
 
 .checkbox {
     width: 15px;
-    border-radius: 0;
+   
    
 }
-.checkbox:checked::before {
+/* .checkbox:checked::before {
   content: '';
   display: block;
   position: absolute;
@@ -122,11 +122,19 @@ ul {
   width: 10px;
   height: 10px;
   background-color: white;
-}
-.checkbox:checked {
+} */
+/* .checked .checkbox:checked {
+    appearance: none;
+    background: #fff
+    
+} */
 
-  background-color: white;
+input[type = "checkbox"]{
+    
+    accent-color: #b98d9a ;
+    
 }
+
 
 h3 {
     font-family: 'Mrs Eaves';
