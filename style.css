@@ -1,11 +1,18 @@
 
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 @font-face {
-  font-family: 'Krysttal Spears';
-  src: url('./Krysttal\ Spears\ Free.woff') format('woff');
+  font-family: 'Gin';
+  src: url('./GinTest-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+    font-family: 'Mrs Eaves';
+    src: url('./Mrs-Eaves-OT-Roman_31443.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 html, body {
     width: 100%;
@@ -55,8 +62,9 @@ html::before {
 }
 
 h1 {
-    font-family: 'Krysttal Spears';
+    font-family: 'gin', serif;
     font-size: 80px;
+    font-weight: lighter;
     margin-left: 20px;
     margin-top: 20px;
     opacity: 90%;
@@ -68,21 +76,61 @@ h1 {
 button {
     border: hidden;
     background-color: #891D5D;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
     padding: 10px;
-    font-family: 'Encode Sans', sans-serif;
-    justify-self: center;
+    font-family:'Mrs Eaves';;
+    
 }
-   
+
+#text {
+    padding-top: 10px;
+}
 
 li {
-    font-family: 'Caveat';
+    font-family: 'Caveat', cursive;
+    font-weight: lighter;
     font-size: 23px;
+    display:flex;
+    align-items: center;
+
+    
+}
+
+ul {
+    list-style: none;
+}
+
+
+.checked {
+    text-decoration: line-through;
+    
+  }
+
+.checkbox {
+    width: 15px;
+    border-radius: 0;
+   
+}
+.checkbox:checked::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: white;
+}
+.checkbox:checked {
+
+  background-color: white;
 }
 
 h3 {
-    font-family: 'Caveat';
+    font-family: 'Mrs Eaves';
+    font-weight: lighter;
     font-size: 35px;
     margin: 20px;
     display: flex;
@@ -90,10 +138,12 @@ h3 {
 }
 
 h4 {
-    font-family: 'Encode Sans', sans-serif;
+    font-family: 'Mrs Eaves';
+    font-size: 20px;
+    font-weight: lighter;
 }
 input {
-    font-family: 'Caveat', cursive;
+    font-family: 'Mrs Eaves';
     width: 200px;
     height: 40px;
     font-size: 20px;

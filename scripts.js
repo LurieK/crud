@@ -16,10 +16,19 @@ const data = JSON.parse(localStorage.getItem('work-items'))
 
 
 const liMaker1 = (text) =>{
+    //create li with a checkbox
     const li= document.createElement('li');
-    li.textContent = text;
-    ulWork.appendChild(li)
-
+    const checkBox = document.createElement('input');
+    checkBox.type = 'checkbox';//changes adds the tag "type=checkbox" to the input
+    checkBox.classList.add('checkbox'); //add class to checkbox so it can be edited in css
+    //add both to the ul
+    li.innerHTML = text;
+    li.prepend(checkBox);
+    ulWork.appendChild(li);
+    //crossout li when the checkbox is clicked
+    checkBox.addEventListener('click', function() {
+        li.classList.toggle('checked');
+    });
 }
 
 function addWorkItem() {
@@ -72,11 +81,24 @@ const data2 = JSON.parse(localStorage.getItem('life-items'))
 
 
 const liMaker2 = (text) =>{
+    //create li and checkbox
     const li= document.createElement('li');
-    li.textContent = text;
-    ulLife.appendChild(li)
+    const checkBox = document.createElement('input');
+    checkBox.type = 'checkbox';//label input type as checkbox
+    checkBox.classList.add('checkbox');//add class to checkbox
+    
+    //add li and checkbox to ul
+    li.innerHTML = text; 
+    li.prepend(checkBox);
+    ulLife.appendChild(li);
+    
+    //event listener for checkbox
+    checkBox.addEventListener('click', function() {
+        li.classList.toggle('checked')//adds class to box to change the css and cross out the li
+    })
 
 }
+
 
 
 
@@ -131,12 +153,23 @@ const data3 = JSON.parse(localStorage.getItem('joy-items'))
 
 
 const liMaker3 = (text) =>{
-    const li= document.createElement('li')
+    const checkBox = document.createElement('input');
+    const li= document.createElement('li');
 
-    li.textContent = text;
-    ulJoy.appendChild(li)
+    checkBox.type = 'checkbox';
+    checkBox.classList.add('checkbox');
 
-}
+    li.innerHTML = text;
+    li.prepend(checkBox);
+
+    ulJoy.appendChild(li);
+
+    checkBox.addEventListener('click', function(){
+        li.classList.toggle('checked')
+    })
+
+};
+
 
 formJoy.addEventListener('submit', function(e){
     e.preventDefault();
